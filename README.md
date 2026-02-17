@@ -17,15 +17,16 @@ An AI-powered web application that generates context-aware Multiple Choice Quest
 
 ## 🏗️ Architecture Overview
 
-User Input  
-   ↓  
-Retriever (Sentence Transformer + FAISS)  
-   ↓  
-Context Builder (Prompt Engineering)  
-   ↓  
-LoRA Fine-Tuned FLAN-T5  
-   ↓  
-Generated MCQ Output  
+User Input
+↓
+Retriever (Sentence Transformer + FAISS)
+↓
+Context Builder (Prompt Engineering)
+↓
+LoRA Fine-Tuned FLAN-T5
+↓
+Generated MCQ Output
+
 
 ---
 
@@ -60,14 +61,13 @@ mcq-rag-app/
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone Repository
-
+1️⃣ Clone Repository
 ```bash
-git clone https://github.com/yourusername/mcq-rag-lora-app.git
+git clone https://github.com/swati-mishra07/mcq-rag-lora-app.git
 cd mcq-rag-lora-app
 
 
-2️⃣Create virtual Environment 
+2️⃣ Create Virtual Environment
 python -m venv venv
 venv\Scripts\activate
 
@@ -77,55 +77,58 @@ pip install -r requirements.txt
 ▶️ Run the Application
 streamlit run app.py
 
-🧠 Model Details
-Base Model: google/flan-t5-base
 
-Fine-Tuning Method: LoRA (Low-Rank Adaptation)
+---
 
-Embedding Model: sentence-transformers/all-MiniLM-L6-v2
+## 🧠 Model Details
 
-⚠️ LoRA weights are excluded due to GitHub file size limitations.
+| Component            | Description |
+|----------------------|-------------|
+| **Base Model**       | google/flan-t5-base |
+| **Fine-Tuning**      | LoRA (Low-Rank Adaptation) |
+| **Embedding Model**  | sentence-transformers/all-MiniLM-L6-v2 |
 
-📊 Why LoRA?
-LoRA enables parameter-efficient fine-tuning by updating only a small subset of model parameters rather than the entire network.
+⚠️ LoRA adapter weights are excluded due to GitHub file size limitations.
 
-Benefits:
+---
 
-Reduced memory usage
+## 📊 Why LoRA?
 
-Faster training
+LoRA enables parameter-efficient fine-tuning by updating only a small subset of model parameters instead of the entire network.
 
-Lower deployment cost
+### ✅ Key Benefits
 
-Efficient adaptation to domain-specific tasks
+- Reduced memory usage  
+- Faster training  
+- Lower deployment cost  
+- Efficient domain adaptation  
 
-📈 Real-World Applications
-EdTech platforms
+---
 
-Automated assessment systems
+## 📈 Real-World Applications
 
-Exam preparation tools
+- EdTech platforms  
+- Automated assessment systems  
+- Exam preparation tools  
+- AI-driven content generation  
+- Learning management systems  
 
-Content generation systems
+---
 
-Learning management systems
+## 🔮 Future Improvements
 
-🔮 Future Improvements
-Deploy to HuggingFace Spaces
+- Deploy to HuggingFace Spaces  
+- Add evaluation metrics (BLEU / ROUGE)  
+- Build REST API endpoint  
+- Implement authentication system  
+- Optimize inference via model merging  
+- Add logging & monitoring  
 
-Add evaluation metrics (BLEU / ROUGE)
+---
 
-Add REST API endpoint
-
-Add authentication system
-
-Optimize inference with model merging
-
-Add logging and monitoring
-
-👩‍💻 Author
 ## 👩‍💻 Author
 
 **Swati Mishra**  
 GitHub: https://github.com/swati-mishra07  
 
+---
