@@ -13,6 +13,7 @@ def main():
     if st.button("Generate"):
 
         retrieved = retriever.retrieve(topic)
+        st.write("Retrieved:", retrieved)
         prompt = build_prompt(topic, difficulty, retrieved)
         output = generate(prompt)
 
