@@ -3,19 +3,23 @@ from src.model_loader import generate
 from src.rag_retriever import RAGRetriever
 from src.prompt_builder import build_prompt
 
-retriever = RAGRetriever()
 
-st.title("🧠 Adaptive RAG MCQ Generator")
+def main():
+    retriever = RAGRetriever()
 
-topic = st.text_input("Enter Topic")
-difficulty = st.selectbox("Select Difficulty", ["Easy", "Medium", "Hard"])
+    st.title("🧠 Adaptive RAG MCQ Generator")
 
-if st.button("Generate"):
+    topic = st.text_input("Enter Topic")
+    difficulty = st.selectbox("Select Difficulty", ["Easy", "Medium", "Hard"])
 
-    retrieved = retriever.retrieve(topic)
+    if st.button("Generate"):
 
-    prompt = build_prompt(topic, difficulty, retrieved)
+        retrieved = retriever.retrieve(topic)
+        prompt = build_prompt(topic, difficulty, retrieved)
+        output = generate(prompt)
 
-    output = generate(prompt)
+        st.text_area("Generated Question", output, height=300)
 
-    st.text_area("Generated Question", output, height=300)
+
+if __name__ == "__main__":
+    main()
