@@ -17,7 +17,9 @@ def main():
         prompt = build_prompt(topic, difficulty, retrieved)
         output = generate(prompt)
 
-        st.text_area("Generated Question", output, height=300)
+        st.markdown("### Generated Question")
+        st.markdown(output)
+
 
 
 if __name__ == "__main__":
