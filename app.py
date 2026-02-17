@@ -1,12 +1,10 @@
 import streamlit as st
 from src.model_loader import generate
-from src.rag_retriever import RAGRetriever
+from src.rag_retriever import retriever
 from src.prompt_builder import build_prompt
 
 
 def main():
-    retriever = RAGRetriever()
-
     st.title("🧠 Adaptive RAG MCQ Generator")
 
     topic = st.text_input("Enter Topic")
