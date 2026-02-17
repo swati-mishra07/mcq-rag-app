@@ -8,9 +8,6 @@ __pycache__/
 # HuggingFace cache
 .cache/
 
-# Model weights
-mcq_lora_model/
-
 # OS files
 .DS_Store
 Thumbs.db
