@@ -1,94 +1,72 @@
-# 🧠 MCQ Generator using RAG + LoRA Fine-Tuning
+# 🧠 Adaptive RAG MCQ Generator
 
-An AI-powered web application that generates context-aware Multiple Choice Questions (MCQs) using Retrieval-Augmented Generation (RAG) and a LoRA fine-tuned Large Language Model.
+An end-to-end Retrieval-Augmented Generation (RAG) system for automated MCQ generation using:
 
----
-
-## 🚀 Project Highlights
-
-- 🔹 LoRA fine-tuned FLAN-T5 model
-- 🔹 Retrieval-Augmented Generation (RAG)
-- 🔹 Semantic search using sentence embeddings
-- 🔹 Modular backend architecture
-- 🔹 Interactive Streamlit interface
-- 🔹 Lightweight and efficient fine-tuning approach
+- 🔎 FAISS-based semantic retrieval
+- 🤖 FLAN-T5 Base
+- 🎯 LoRA Fine-Tuning (PEFT)
+- 📊 Automatic Evaluation (ROUGE, BLEU, BERTScore)
+- ⚡ Inference Time Benchmarking
+- 🌐 Streamlit Web Interface
 
 ---
 
-## 🏗️ Architecture Overview
+## 🚀 Features
 
-User Input
-↓
-Retriever (Sentence Transformer + FAISS)
-↓
-Context Builder (Prompt Engineering)
-↓
-LoRA Fine-Tuned FLAN-T5
-↓
-Generated MCQ Output
-
+- RAG-based context retrieval
+- Base vs LoRA model comparison
+- Inference time logging
+- Automatic evaluation metrics
+- Modular architecture
+- Research-style evaluation pipeline
 
 ---
 
-## 🛠️ Tech Stack
-
-- Python
-- Streamlit
-- HuggingFace Transformers
-- PEFT (LoRA)
-- Sentence-Transformers
-- FAISS
-- PyTorch
-
----
-
-## 📂 Project Structure
-
+## 🏗️ Project Structure
 mcq-rag-app/
 │
-├── app.py # Streamlit UI
-├── src/
-│ ├── model_loader.py # Loads base model + LoRA
-│ ├── rag_retriever.py # Semantic retrieval logic
-│ └── prompt_builder.py # Prompt engineering
-│
+├── app.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+│
+├── src/
+│ ├── model_loader.py
+│ ├── rag_retriever.py
+│ ├── prompt_builder.py
+│ └── evaluation.py
+│
+└── data/
 
 
 ---
 
-## ⚙️ Installation
+## 📊 Evaluation Metrics
 
-1️⃣ Clone Repository
+- ROUGE-L
+- BLEU
+- BERTScore (Semantic Similarity)
+
+---
+
+## 🧪 Model Comparison
+
+The system compares:
+
+- Base FLAN-T5
+- LoRA Fine-Tuned Model
+
+Including:
+- Output quality
+- Inference time
+- Metric scores
+
+---
+
+## 🖥️ Run Locally
+
 ```bash
-git clone https://github.com/swati-mishra07/mcq-rag-lora-app.git
-cd mcq-rag-lora-app
-
-
-2️⃣ Create Virtual Environment
-python -m venv venv
-venv\Scripts\activate
-
-3️⃣ Install Dependencies
 pip install -r requirements.txt
-
-▶️ Run the Application
 streamlit run app.py
-
-
----
-
-## 🧠 Model Details
-
-| Component            | Description |
-|----------------------|-------------|
-| **Base Model**       | google/flan-t5-base |
-| **Fine-Tuning**      | LoRA (Low-Rank Adaptation) |
-| **Embedding Model**  | sentence-transformers/all-MiniLM-L6-v2 |
-
-⚠️ LoRA adapter weights are excluded due to GitHub file size limitations.
 
 ---
 
