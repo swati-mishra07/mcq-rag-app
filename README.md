@@ -1,6 +1,6 @@
-# 🧠 Adaptive RAG MCQ Generator
+# 🧠 Adaptive LoRA Fined-Tuned MCQ Generator
 
-An end-to-end Retrieval-Augmented Generation (RAG) system for automated MCQ generation using:
+Built a LoRA fine-tuned MCQ generation system comparing base and adapted models using evaluation metrics (BLEU, ROUGE, BERTScore) with Streamlit deployment.
 
 - 🔎 FAISS-based semantic retrieval
 - 🤖 FLAN-T5 Base
