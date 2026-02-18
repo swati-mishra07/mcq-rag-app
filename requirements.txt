@@ -1,12 +1,13 @@
 streamlit==1.32.2
 torch==2.1.2
-transformers==4.41.2
+transformers==4.43.1
+peft==0.11.1
+evaluate==0.4.1
 sentence-transformers==2.7.0
 faiss-cpu==1.7.4
 pandas==2.2.2
 numpy==1.26.4
-peft==0.10.0
-evaluate
-rouge-score
+accelerate==0.32.0
 nltk
+rouge-score
 bert-score

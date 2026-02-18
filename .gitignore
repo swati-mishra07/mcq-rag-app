@@ -1,5 +1,7 @@
 # Virtual environment
 venv/
+#streamlit_app/venv/
+.streamlit/
 
 # Python cache
 __pycache__/
@@ -11,3 +13,5 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+.env

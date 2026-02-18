@@ -1,8 +1,5 @@
 {
-  "alora_invocation_tokens": null,
   "alpha_pattern": {},
-  "arrow_config": null,
-  "auto_mapping": null,
   "base_model_name_or_path": "google/flan-t5-base",
   "bias": "none",
   "corda_config": null,
@@ -19,7 +16,6 @@
   "lora_alpha": 16,
   "lora_bias": false,
   "lora_dropout": 0.1,
-  "megatron_config": null,
   "megatron_core": "megatron.core",
   "modules_to_save": null,
   "peft_type": "LORA",
