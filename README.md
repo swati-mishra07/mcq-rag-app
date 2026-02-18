@@ -1,24 +1,22 @@
 # 🧠 Adaptive LoRA Fined-Tuned MCQ Generator
 
-Built a LoRA fine-tuned MCQ generation system comparing base and adapted models using evaluation metrics (BLEU, ROUGE, BERTScore) with Streamlit deployment.
+A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
 
-- 🔎 FAISS-based semantic retrieval
-- 🤖 FLAN-T5 Base
-- 🎯 LoRA Fine-Tuning (PEFT)
-- 📊 Automatic Evaluation (ROUGE, BLEU, BERTScore)
-- ⚡ Inference Time Benchmarking
-- 🌐 Streamlit Web Interface
+The system evaluates model outputs using BLEU, ROUGE, and BERTScore metrics and benchmarks inference time.
 
 ---
 
 ## 🚀 Features
 
-- RAG-based context retrieval
-- Base vs LoRA model comparison
-- Inference time logging
-- Automatic evaluation metrics
-- Modular architecture
-- Research-style evaluation pipeline
+🤖 Base Model: google/flan-t5-base
+
+🎯 LoRA Fine-Tuning using PEFT
+
+📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
+
+⚡ Inference Time Comparison
+
+🌐 Interactive Streamlit Web Interface
 
 ---
 
@@ -27,38 +25,43 @@ mcq-rag-app/
 │
 ├── app.py
 ├── requirements.txt
-├── README.md
-│
-├── src/
-│ ├── model_loader.py
-│ ├── rag_retriever.py
-│ ├── prompt_builder.py
-│ └── evaluation.py
-│
-└── data/
-
+├── mcq_lora_model/
+│   ├── adapter_config.json
+│   └── adapter_model.bin / .safetensors
+└── README.md
 
 ---
 
 ## 📊 Evaluation Metrics
 
-- ROUGE-L
-- BLEU
-- BERTScore (Semantic Similarity)
+The system compares generated MCQs using:
+
+BLEU
+
+ROUGE-L
+
+BERTScore (semantic similarity)
+
+Metrics are computed against a user-provided reference answer.
+
 
 ---
 
 ## 🧪 Model Comparison
 
-The system compares:
+The app compares:
 
-- Base FLAN-T5
-- LoRA Fine-Tuned Model
+Base FLAN-T5 Model
 
-Including:
-- Output quality
-- Inference time
-- Metric scores
+LoRA Fine-Tuned Model
+
+Across:
+
+Output quality
+
+Inference time
+
+Automatic evaluation metrics
 
 ---
 
@@ -70,37 +73,30 @@ streamlit run app.py
 
 ---
 
-## 📊 Why LoRA?
-
-LoRA enables parameter-efficient fine-tuning by updating only a small subset of model parameters instead of the entire network.
-
-### ✅ Key Benefits
-
-- Reduced memory usage  
-- Faster training  
-- Lower deployment cost  
-- Efficient domain adaptation  
-
----
-
 ## 📈 Real-World Applications
 
-- EdTech platforms  
-- Automated assessment systems  
-- Exam preparation tools  
-- AI-driven content generation  
-- Learning management systems  
+Educational content generation
 
+Automated assessment systems
+
+EdTech platforms
+
+AI-assisted curriculum design
+
+  
 ---
 
 ## 🔮 Future Improvements
 
-- Deploy to HuggingFace Spaces  
-- Add evaluation metrics (BLEU / ROUGE)  
-- Build REST API endpoint  
-- Implement authentication system  
-- Optimize inference via model merging  
-- Add logging & monitoring  
+Implement real Retrieval-Augmented Generation (FAISS-based)
+
+Batch dataset evaluation
+
+Visualization dashboards
+
+REST API deployment
+
+Model merging for optimized inference
 
 ---
 
