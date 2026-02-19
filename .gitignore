@@ -15,3 +15,6 @@ __pycache__/
 Thumbs.db
 
 .env
+*.index
+*.safetensors
+mcq_lora_model/
