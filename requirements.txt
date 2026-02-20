@@ -3,7 +3,7 @@ torch==2.2.2
 transformers==4.43.1
 peft==0.11.1
 sentence-transformers==2.7.0
-faiss-cpu
+faiss-cpu==1.13.2
 pandas
 numpy
 nltk
