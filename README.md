@@ -1,10 +1,20 @@
-# 🧠 Adaptive LoRA Fined-Tuned MCQ Generator
+---
+title: Adaptive RAG MCQ Generator
+emoji: 🧠
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: "1.32.2"
+app_file: app.py
+pinned: false
+---
+
+# 🧠 Adaptive LoRA Fine-Tuned MCQ Generator
 
 A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
 
 The system evaluates model outputs using BLEU, ROUGE, and BERTScore metrics and benchmarks inference time.
 
----
 
 ## 🚀 Features
 
