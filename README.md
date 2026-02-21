@@ -1,33 +1,41 @@
----
-title: Adaptive RAG MCQ Generator
-emoji: 🧠
-colorFrom: indigo
-colorTo: blue
-sdk: streamlit
-sdk_version: "1.32.2"
-app_file: app.py
-python_version: "3.10"
-pinned: false
----
-
 # 🧠 Adaptive LoRA Fine-Tuned MCQ Generator
+
+![App Demo](assets/app_demo.png)
 
 A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
 
-The system evaluates model outputs using BLEU, ROUGE, and BERTScore metrics and benchmarks inference time.
+The system evaluates model outputs using BLEU, ROUGE-L, and BERTScore metrics and benchmarks inference time.
 
+---
 
 ## 🚀 Features
 
-🤖 Base Model: google/flan-t5-base
+- 🤖 Base Model: google/flan-t5-base
+- 🎯 LoRA Fine-Tuning using PEFT
+- 📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
+- ⚡ Inference Time Comparison
+- 🌐 Interactive Streamlit Web Interface
 
-🎯 LoRA Fine-Tuning using PEFT
+---
 
-📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
+## 🏗️ Project Structure
+# 🧠 Adaptive LoRA Fine-Tuned MCQ Generator
 
-⚡ Inference Time Comparison
+![App Demo](assets/app_demo.png)
 
-🌐 Interactive Streamlit Web Interface
+A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
+
+The system evaluates model outputs using BLEU, ROUGE-L, and BERTScore metrics and benchmarks inference time.
+
+---
+
+## 🚀 Features
+
+- 🤖 Base Model: google/flan-t5-base
+- 🎯 LoRA Fine-Tuning using PEFT
+- 📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
+- ⚡ Inference Time Comparison
+- 🌐 Interactive Streamlit Web Interface
 
 ---
 
@@ -37,83 +45,48 @@ mcq-rag-app/
 ├── app.py
 ├── requirements.txt
 ├── mcq_lora_model/
-│   ├── adapter_config.json
-│   └── adapter_model.bin / .safetensors
+├── assets/
+│ └── app_demo.png
 └── README.md
+
+---
+
+## 🧠 Model Details
+
+- Base Model: google/flan-t5-base
+- Fine-Tuning: LoRA (Low-Rank Adaptation)
+- Frameworks: Transformers, PEFT, PyTorch
 
 ---
 
 ## 📊 Evaluation Metrics
 
-The system compares generated MCQs using:
-
-BLEU
-
-ROUGE-L
-
-BERTScore (semantic similarity)
-
-Metrics are computed against a user-provided reference answer.
-
-
----
-
-## 🧪 Model Comparison
-
-The app compares:
-
-Base FLAN-T5 Model
-
-LoRA Fine-Tuned Model
-
-Across:
-
-Output quality
-
-Inference time
-
-Automatic evaluation metrics
+- BLEU
+- ROUGE-L
+- BERTScore
 
 ---
 
 ## 🖥️ Run Locally
 
 ```bash
+git clone https://github.com/swati-mishra07/mcq-rag-app.git
+cd mcq-rag-app
+
+python -m venv venv
+venv\Scripts\activate
+
 pip install -r requirements.txt
 streamlit run app.py
 
 ---
 
-## 📈 Real-World Applications
-
-Educational content generation
-
-Automated assessment systems
-
+📈 Applications
 EdTech platforms
-
-AI-assisted curriculum design
-
-  
----
-
-## 🔮 Future Improvements
-
-Implement real Retrieval-Augmented Generation (FAISS-based)
-
-Batch dataset evaluation
-
-Visualization dashboards
-
-REST API deployment
-
-Model merging for optimized inference
+Automated test generation
+AI curriculum tools
 
 ---
-
-## 👩‍💻 Author
-
-**Swati Mishra**  
-GitHub: https://github.com/swati-mishra07  
-
----
+👩‍💻 Author
+Swati Mishra
+GitHub: https://github.com/swati-mishra07
