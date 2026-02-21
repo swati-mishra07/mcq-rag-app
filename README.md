@@ -1,48 +1,114 @@
 # 🧠 Adaptive LoRA Fine-Tuned MCQ Generator
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
+![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow)
+![PEFT](https://img.shields.io/badge/PEFT-LoRA-green)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
+
+---
+
+## 📸 Application Demo
+
 ![App Demo](assets/app_demo.png)
 
-A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
+---
 
-The system evaluates model outputs using BLEU, ROUGE-L, and BERTScore metrics and benchmarks inference time.
+## 🚀 Project Overview
+
+This project implements a **LoRA fine-tuned Large Language Model pipeline** for automatic Multiple Choice Question (MCQ) generation.
+
+It compares:
+
+- Base model performance
+- LoRA fine-tuned model performance
+- Inference speed
+- Automatic NLP evaluation metrics
+
+The system demonstrates practical LLM optimization using parameter-efficient fine-tuning.
 
 ---
 
-## 🚀 Features
+## 🧠 Base Model
 
-- 🤖 Base Model: google/flan-t5-base
-- 🎯 LoRA Fine-Tuning using PEFT
-- 📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
-- ⚡ Inference Time Comparison
-- 🌐 Interactive Streamlit Web Interface
+- **Model:** google/flan-t5-base
+- Framework: Hugging Face Transformers
+- Fine-Tuning: LoRA (Low-Rank Adaptation) using PEFT
 
 ---
 
-## 🏗️ Project Structure
-mcq-rag-app/
-│
-├── app.py
-├── requirements.txt
-├── mcq_lora_model/
-├── assets/
-│ └── app_demo.png
-└── README.md
+## ⚙️ System Architecture
 
----
-
-## 🧠 Model Details
-
-- Base Model: google/flan-t5-base
-- Fine-Tuning: LoRA (Low-Rank Adaptation)
-- Frameworks: Transformers, PEFT, PyTorch
+```
+                ┌────────────────────┐
+                │   User Input Text  │
+                └─────────┬──────────┘
+                          │
+                          ▼
+               ┌──────────────────────┐
+               │   FLAN-T5 Tokenizer  │
+               └─────────┬────────────┘
+                         │
+         ┌───────────────┴───────────────┐
+         ▼                               ▼
+┌───────────────────┐           ┌───────────────────┐
+│   Base FLAN-T5    │           │  LoRA Fine-Tuned  │
+│     Model         │           │       Model       │
+└─────────┬─────────┘           └─────────┬─────────┘
+          │                                 │
+          ▼                                 ▼
+   Generated MCQ                     Generated MCQ
+          │                                 │
+          └──────────────┬──────────────────┘
+                         ▼
+               ┌────────────────────┐
+               │ Evaluation Module  │
+               │ BLEU / ROUGE /     │
+               │ BERTScore          │
+               └────────────────────┘
+```
 
 ---
 
 ## 📊 Evaluation Metrics
 
+The system automatically evaluates generated MCQs using:
+
 - BLEU
 - ROUGE-L
-- BERTScore
+- BERTScore (semantic similarity)
+
+This provides both lexical and semantic quality comparison.
+
+---
+
+## 🔬 Technical Stack
+
+- Python 3.10
+- PyTorch
+- Transformers (Hugging Face)
+- PEFT (LoRA)
+- Sentence-Transformers
+- FAISS (vector similarity support)
+- Streamlit (frontend UI)
+
+---
+
+## 📁 Project Structure
+
+```
+mcq-rag-app/
+│
+├── app.py
+├── requirements.txt
+├── mcq_lora_model/
+│   ├── adapter_config.json
+│   └── adapter_model.safetensors
+├── assets/
+│   └── app_demo.png
+└── README.md
+```
 
 ---
 
@@ -57,17 +123,45 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 streamlit run app.py
+```
 
 ---
 
-📈 Applications
-EdTech platforms
-Automated test generation
-AI curriculum tools
+## 💡 Key ML Concepts Demonstrated
+
+- Parameter Efficient Fine-Tuning (LoRA)
+- Transformer-based Sequence-to-Sequence models
+- Model comparison benchmarking
+- Inference latency measurement
+- NLP automatic evaluation metrics
+- Modular ML application design
 
 ---
 
+## 📈 Real-World Applications
 
-👩‍💻 Author
-Swati Mishra
+- AI-based education systems
+- Automated assessment generation
+- EdTech platforms
+- Curriculum design automation
+- Smart content generation tools
+
+---
+
+## 🧪 Future Improvements
+
+- Full Retrieval-Augmented Generation (RAG) pipeline
+- Batch dataset benchmarking
+- REST API deployment
+- Model quantization for faster inference
+- Production-grade Docker containerization
+
+---
+
+## 👩‍💻 Author
+
+Swati Mishra  
+Computer Science (IT) Undergraduate  
+Machine Learning & AI Enthusiast  
+
 GitHub: https://github.com/swati-mishra07
