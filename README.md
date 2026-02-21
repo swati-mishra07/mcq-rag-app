@@ -19,27 +19,6 @@ The system evaluates model outputs using BLEU, ROUGE-L, and BERTScore metrics an
 ---
 
 ## 🏗️ Project Structure
-# 🧠 Adaptive LoRA Fine-Tuned MCQ Generator
-
-![App Demo](assets/app_demo.png)
-
-A Streamlit-based NLP application that compares a base sequence-to-sequence model with a LoRA fine-tuned variant for automatic MCQ generation.
-
-The system evaluates model outputs using BLEU, ROUGE-L, and BERTScore metrics and benchmarks inference time.
-
----
-
-## 🚀 Features
-
-- 🤖 Base Model: google/flan-t5-base
-- 🎯 LoRA Fine-Tuning using PEFT
-- 📊 Automatic Evaluation (BLEU, ROUGE-L, BERTScore)
-- ⚡ Inference Time Comparison
-- 🌐 Interactive Streamlit Web Interface
-
----
-
-## 🏗️ Project Structure
 mcq-rag-app/
 │
 ├── app.py
@@ -87,6 +66,8 @@ Automated test generation
 AI curriculum tools
 
 ---
+
+
 👩‍💻 Author
 Swati Mishra
 GitHub: https://github.com/swati-mishra07
