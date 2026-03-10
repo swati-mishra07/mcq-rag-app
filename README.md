@@ -161,7 +161,6 @@ streamlit run app.py
 ## 👩‍💻 Author
 
 Swati Mishra  
-Computer Science (IT) Undergraduate  
-Machine Learning & AI Enthusiast  
-
+-
 GitHub: https://github.com/swati-mishra07
+- LinkedIn: https://www.linkedin.com/in/swati-mishra-801193308
